@@ -201,7 +201,6 @@ CREATE TABLE usuario
 	id_usuario           INTEGER NOT NULL,
 	nombre               VARCHAR(20) NOT NULL,
 	apellido             VARCHAR(20) NOT NULL,
-	ci                   INTEGER NOT NULL,
 	password             VARCHAR(50) NOT NULL,
 	celular              INTEGER NOT NULL,
 	email                VARCHAR(30) NOT NULL,

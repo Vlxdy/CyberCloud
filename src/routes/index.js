@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req,res)=>{
-    res.send('Hello World');
+const pool = require('../database');
+
+router.get('/', async (req,res)=>{
+    const terminals = await pool.query("SELECT * FROM terminal");
+    res.render('terminals/index',{terminals});
 })
 
 module.exports = router;

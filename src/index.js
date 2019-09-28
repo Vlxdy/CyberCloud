@@ -10,6 +10,7 @@ const passport = require('passport');
 const { database } = require('./keys');
 
 // inicializaciones
+
 const app = express();
 require('./lib/passport');
 
@@ -27,6 +28,7 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 
 // Middlewares
+
 app.use(session({
     secret: 'vladimircopafabian',
     resave: false,
@@ -48,7 +50,7 @@ app.use((req, res, next) =>{
     app.locals.user = req.user;
     next();
 });
- 
+
 // Routes
 
 app.use(require('./routes/'));
